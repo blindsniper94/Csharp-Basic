@@ -1,0 +1,5 @@
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 97\bin\Debug\Drill 97.exe.config
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 97\bin\Debug\Drill 97.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 97\bin\Debug\Drill 97.pdb
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 97\obj\Debug\Drill 97.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 97\obj\Debug\Drill 97.pdb
