@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Step 103\bin\Debug\Step 103.exe.config
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Step 103\bin\Debug\Step 103.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Step 103\bin\Debug\Step 103.pdb
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Step 103\obj\Debug\Step 103.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Step 103\obj\Debug\Step 103.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Step 103\obj\Debug\Step 103.pdb
