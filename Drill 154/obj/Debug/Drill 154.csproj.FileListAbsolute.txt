@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 154\bin\Debug\Drill 154.exe.config
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 154\bin\Debug\Drill 154.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 154\bin\Debug\Drill 154.pdb
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 154\obj\Debug\Drill 154.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 154\obj\Debug\Drill 154.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 154\obj\Debug\Drill 154.pdb
