@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 165\bin\Debug\Drill 165.exe.config
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 165\bin\Debug\Drill 165.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 165\bin\Debug\Drill 165.pdb
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 165\obj\Debug\Drill 165.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 165\obj\Debug\Drill 165.exe
+C:\Users\Alex\Documents\TechAcademyNotes\C#\C# Drills\Drill 165\obj\Debug\Drill 165.pdb
