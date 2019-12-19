@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+<form submit="/add" method="post">
+    <div>
+        <input name="FirstName" type="text" placeholder="First Name" />
+    </div>
+    <div>
+        <input name="LastName" type="text" placeholder="Last Name" />
+    </div>
+    <div>
+        <input name="EmailAddress" type="email" placeholder="Email Address" />
+    </div>
+    <div>
+        <label>Age</label>
+        <input name="Age" type="number" />
+    </div>
+    <div>
+        <input name="CarYear" type="number" placeholder="Car Year" />
+    </div>
+    <div>
+        <input name="CarMake" type="text" placeholder="Car Make" />
+    </div>
+    <div>
+        <input name="CarModel" type="text" placeholder="Car Model" />
+    </div>
+    <div>
+        <lable>Any DUIs?</lable>
+        <input name="UserDui" type="checkbox" />
+    </div>
+    <div>
+        <label>Have you had any speeding tickets?</label>
+        <input name="UserSpeedingTickets" type="number" />
+    </div>
+    <div>
+        <label>Would you like Full Coverage? Check the box.</label>
+        <input name="FullCoverage" type="checkbox" />
+    </div>
+    <button type="submit">Add User</button>
+</form>

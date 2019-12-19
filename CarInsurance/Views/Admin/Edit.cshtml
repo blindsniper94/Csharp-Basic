@@ -1,0 +1,31 @@
+﻿@model CarInsurance.Models.User
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<form submit="/edit" method="post">
+    <input name="Id" value="@Model.Id" hidden />
+    <label>First Name</label>
+    <input name="FirstName" value="@Model.FirstName" />
+    <label>Last Name</label>
+    <input name="LastName" value="@Model.LastName" />
+    <label>Email Address</label>
+    <input name="EmailAddress" type="email" value="@Model.EmailAddress" />
+    <label>Age</label>
+    <input name="Age" type="number" value="@Model.Age" />
+    <label>Car Year</label>
+    <input name="CarYear" type="number" value="@Model.CarYear" />
+    <label>Car Model</label>
+    <input name="CarModel" value="@Model.CarModel" />
+    <label>Car Make</label>
+    <input name="CarMake" value="@Model.CarMake" />
+    <label>How many speeding tickets</label>
+    <input name="UserSpeedingTickets" type="number" value="@Model.UserSpeedingTickets" />
+    <label>Duis?</label>
+    <input name="UserDui" type="checkbox" value="@Model.UserDui" />
+    <label>Full Coverage</label>
+    <input name="FullCoverage" type="checkbox" checked="checked" value="@Model.FullCoverage" />
+    <button type="submit">Save</button>
+
+</form>

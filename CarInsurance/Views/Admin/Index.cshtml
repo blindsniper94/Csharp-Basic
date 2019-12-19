@@ -1,0 +1,13 @@
+﻿@model List<CarInsurance.Models.User>
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Users</h2>
+@{ 
+    foreach(var user in Model)
+    {
+    <h2><a href="/admin/details/@user.Id"> @user.FirstName @user.LastName </a> @user.EmailAddress @user.CarMake @user.CarModel</h2>
+    }
+}
+<a href="/admin/add">Add</a>

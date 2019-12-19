@@ -1,0 +1,20 @@
+﻿@model CarInsurance.Models.User
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h2>First name: @Model.FirstName</h2>
+<h2>Last name: @Model.LastName</h2>
+<h2>Email Address: @Model.EmailAddress</h2>
+<h2>Age: @Model.Age</h2>
+<h2>Car Year: @Model.CarYear</h2>
+<h2>Car Model: @Model.CarModel</h2>
+<h2>Car Make: @Model.CarMake</h2>
+<h2>Speeding Tickets: @Model.UserSpeedingTickets</h2>
+<h2>Dui?: @Model.UserDui</h2>
+<h2>Full Coverage?: @Model.FullCoverage</h2>
+
+<a href="../edit/@Model.Id">Edit</a>
+<a href="../CaculateTotal/@Model.Id">Caculate Total</a>
