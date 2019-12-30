@@ -1,0 +1,49 @@
+﻿@model CarInsurance.Models.User
+@{
+    ViewBag.Title = "CaculateTotal";
+}
+@{
+    double monthlyTotal = 50;
+
+    if (Model.Age < 25)
+    {
+        monthlyTotal = monthlyTotal + 25;
+        if (Model.Age < 18)
+        {
+            monthlyTotal = monthlyTotal + 75;
+        }
+    }
+    if (Model.Age > 100)
+    {
+        monthlyTotal = monthlyTotal + 25;
+    }
+    if (Model.CarYear < 2000)
+    {
+        monthlyTotal = monthlyTotal + 25;
+    }
+    if (Model.CarYear > 2015)
+    {
+        monthlyTotal = monthlyTotal + 25;
+    }
+    if (Model.CarMake == "porsche")
+    {
+        monthlyTotal = monthlyTotal + 25;
+        if (Model.CarModel == "911carrera")
+        {
+            monthlyTotal = monthlyTotal + 25;
+        }
+    }
+    for (int i = 0; i < Model.UserSpeedingTickets; i++)
+    {
+        monthlyTotal = monthlyTotal + 10;
+    }
+    if (Model.UserDui == true)
+    {
+        monthlyTotal = (monthlyTotal * .25) + monthlyTotal;
+    }
+
+}
+<h2>@Model.FirstName @Model.LastName</h2>
+<h2>Your monthly total comes to:</h2>
+<h2>@monthlyTotal</h2>
+

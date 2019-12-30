@@ -1,7 +1,7 @@
 ﻿@model List<CarInsurance.Models.User>
 
 <div>
-    @using (Html.BeginForm("Signup", "Home", FormMethod.Post))
+    @using (Html.BeginForm("Add", "Home", FormMethod.Post))
     {
         <div>
             <input name="FirstName" type="text" placeholder="First Name" />
@@ -27,7 +27,7 @@
         </div>
         <div>
             <lable>Any DUIs?</lable>
-            <input name="UserDui" type="checkbox" />
+            <input name="UserDui" type="checkbox" value="true"/>
         </div>
         <div>
             <label>Have you had any speeding tickets?</label>
@@ -35,7 +35,7 @@
         </div>
         <div>
             <label>Would you like Full Coverage? Check the box.</label>
-            <input name="FullCoverage" type="checkbox"/>
+            <input name="FullCoverage" type="checkbox"value="true"/>
         </div>
         <div>
             <button type="submit" class="btn btn-block btn-primary">Submit</button>
