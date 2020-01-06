@@ -37,8 +37,47 @@ namespace CarInsurance.Controllers
         [HttpPost]
         public ActionResult Add(User user)
         {
-            string queryString = @"Insert into Users (FirstName, LastName, EmailAddress, Age, CarYear, CarModel, CarMake, UserSpeedingTickets, UserDui, FullCoverage)
-                                    Values (@FirstName, @LastName, @EmailAddress, @Age, @CarYear, @CarModel, @CarMake, @UserSpeedingTickets, @UserDui, @FullCoverage)";
+            double monthlyTotal = 50;
+
+            if (user.Age < 25)
+            {
+                monthlyTotal = monthlyTotal + 25;
+                if (user.Age < 18)
+                {
+                    monthlyTotal = monthlyTotal + 75;
+                }
+            }
+            if (user.Age > 100)
+            {
+                monthlyTotal = monthlyTotal + 25;
+            }
+            if (user.CarYear < 2000)
+            {
+                monthlyTotal = monthlyTotal + 25;
+            }
+            if (user.CarYear > 2015)
+            {
+                monthlyTotal = monthlyTotal + 25;
+            }
+            if (user.CarMake == "porsche")
+            {
+                monthlyTotal = monthlyTotal + 25;
+                if (user.CarModel == "911carrera")
+                {
+                    monthlyTotal = monthlyTotal + 25;
+                }
+            }
+            for (int i = 0; i < user.UserSpeedingTickets; i++)
+            {
+                monthlyTotal = monthlyTotal + 10;
+            }
+            if (user.UserDui == true)
+            {
+                monthlyTotal = (monthlyTotal * .25) + monthlyTotal;
+            }
+            user.Quote = monthlyTotal;
+            string queryString = @"Insert into Users (FirstName, LastName, EmailAddress, Age, CarYear, CarModel, CarMake, UserSpeedingTickets, UserDui, FullCoverage, Quote)
+                                    Values (@FirstName, @LastName, @EmailAddress, @Age, @CarYear, @CarModel, @CarMake, @UserSpeedingTickets, @UserDui, @FullCoverage, @Quote)";
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
@@ -52,6 +91,7 @@ namespace CarInsurance.Controllers
                 command.Parameters.Add("@UserSpeedingTickets", SqlDbType.Int);
                 command.Parameters.Add("@UserDui", SqlDbType.Bit);
                 command.Parameters.Add("@FullCoverage", SqlDbType.Bit);
+                command.Parameters.Add("@Quote", SqlDbType.Int);
 
                 command.Parameters["@FirstName"].Value = user.FirstName;
                 command.Parameters["@LastName"].Value = user.LastName;
@@ -63,6 +103,7 @@ namespace CarInsurance.Controllers
                 command.Parameters["@UserSpeedingTickets"].Value = user.UserSpeedingTickets;
                 command.Parameters["@UserDui"].Value = user.UserDui;
                 command.Parameters["@FullCoverage"].Value = user.FullCoverage;
+                command.Parameters["@Quote"].Value = user.Quote;
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -74,7 +115,6 @@ namespace CarInsurance.Controllers
         {
 
             string queryString = "Select * From Users where user.Id = @Id";
-            //User user = new User();
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {

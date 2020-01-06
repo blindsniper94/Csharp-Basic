@@ -18,6 +18,6 @@ namespace CarInsurance.Models
         public bool UserDui { get; set; }
         public int UserSpeedingTickets { get; set; }
         public bool FullCoverage { get; set; }
-        
+        public double Quote { get; set; }
     }
 }
