@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<form>
+    <div>
+        <p>First Name: <span data-bind="text: firstName"/></p>
+        <p>Last Name: <span data-bind="text: lastName"/></p>
+
+    </div>
+    <hr/>
+    <div>
+        <label>First Name:</label>
+        <input data-bind="value: firstName, valueUpdate:'keyup'"/>
+        <label>Last Name:</label>
+        <input data-bind="value: lastName, valueUpdate: 'keyup'"/>
+        <input type="submit" data-bind="click: addName" />
+    </div>
+    <p>Full Name: <span data-bind="text: fullName"/></p>
+</form>
+<ul data-bind="foreach: array">
+    <li data-bind="text: $data"></li>
+</ul>
+<script src="~/Scripts/knockout-3.5.1.js"></script>
+
+<script type="text/javascript">
+    var vm = {
+        firstName: ko.observable("Alex"),
+        lastName: ko.observable("Placeholder"),
+        array: ko.observableArray(),
+        addName: function () {
+            this.array.push(this.fullName());
+        }
+    };
+
+    vm.fullName = ko.dependentObservable(function () {
+        return vm.firstName()+ " "+ vm.lastName()
+    });
+    vm.array.push('Geoff Ramsey');
+    vm.array.push('Geralt Ovrivia');
+    vm.array.push('Tony Stark');
+    vm.firstName.subscribe(function (val) {
+        console.log("First Name Updated as " + val);
+    });
+    ko.applyBindings(vm);
+</script>
